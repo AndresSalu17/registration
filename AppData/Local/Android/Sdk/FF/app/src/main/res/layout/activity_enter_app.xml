@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".EnterApp">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription"
+        />
+
+    <TextView
+        android:id="@+id/text_entrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Entrar"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toTopOf="@id/ContainerComponents2"
+        app:layout_constraintStart_toStartOf="@id/ContainerComponents2" />
+
+    <View
+        android:id="@+id/ContainerComponents2"
+        style="@style/ContainerComponents2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logo"
+        />
+
+
+    <EditText
+        android:id="@+id/edit_login"
+        style="@style/Edit_Text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Digite seu email"
+        android:inputType="textEmailAddress"
+        android:imeOptions="actionNext"
+        android:textColorHint="#808080"
+        android:textColor="#000000"
+        android:drawableRight="@drawable/ic_email"
+        app:layout_constraintEnd_toEndOf="@id/ContainerComponents2"
+        app:layout_constraintStart_toStartOf="@id/ContainerComponents2"
+        app:layout_constraintTop_toTopOf="@id/ContainerComponents2"
+        />
+
+    <EditText
+        android:id="@+id/edit_senha2"
+        style="@style/Edit_Text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Digite sua senha"
+        android:imeOptions="actionNext"
+        android:textColorHint="#808080"
+        android:textColor="#000000"
+        android:inputType="textPassword"
+        android:drawableRight="@drawable/ic_senha"
+        app:layout_constraintEnd_toEndOf="@id/ContainerComponents2"
+        app:layout_constraintStart_toStartOf="@id/ContainerComponents2"
+        app:layout_constraintTop_toBottomOf="@id/edit_login"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_Entrar"
+        style="@style/Button"
+        android:text="@string/entrar"
+        android:layout_width="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edit_senha2"
+        />
+
+    <TextView
+        android:id="@+id/text_esqueceu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_esqueceu"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/ContainerComponents2"
+        app:layout_constraintTop_toBottomOf="@id/ContainerComponents2"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_face"
+        style="@style/Button2"
+        android:text="@string/text_face"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/logos_facebook"
+        app:layout_constraintTop_toBottomOf="@id/text_esqueceu"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_google"
+        style="@style/Button2"
+        android:text="@string/text_google"
+        android:drawableLeft="@drawable/logo_google"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/btn_face"
+        />
+
+    <TextView
+        android:id="@+id/text_cadastro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_cadastro"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        app:layout_constraintTop_toBottomOf="@id/btn_google"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="30dp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

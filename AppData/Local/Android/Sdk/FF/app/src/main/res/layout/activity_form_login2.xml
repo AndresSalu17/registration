@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".FormLogin2">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/text_entrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Novo usuário"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toTopOf="@id/ContainerComponents"
+        app:layout_constraintStart_toStartOf="@id/ContainerComponents" />
+    
+    <View
+        android:id="@+id/ContainerComponents"
+        style="@style/ContainerComponents"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logo"
+        />
+
+    <EditText
+        android:id="@+id/edit_email1"
+        style="@style/Edit_Text"
+        android:hint="Digite seu email"
+        android:inputType="textEmailAddress"
+        android:textColorHint="#808080"
+        android:textColor="#000000"
+        android:imeOptions="actionNext"
+        android:drawableRight="@drawable/ic_email"
+        app:layout_constraintStart_toStartOf="@id/ContainerComponents"
+        app:layout_constraintEnd_toEndOf="@id/ContainerComponents"
+        app:layout_constraintTop_toTopOf="@id/ContainerComponents"
+        />
+
+    <EditText
+        android:id="@+id/edit_confEmail1"
+        style="@style/Edit_Text"
+        android:layout_marginTop="10dp"
+        android:drawableRight="@drawable/ic_email"
+        android:hint="Confirme seu email"
+        android:inputType="textEmailAddress"
+        android:textColorHint="#808080"
+        android:textColor="#000000"
+        android:imeOptions="actionNext"
+        app:layout_constraintEnd_toEndOf="@id/ContainerComponents"
+        app:layout_constraintStart_toStartOf="@id/ContainerComponents"
+        app:layout_constraintTop_toBottomOf="@id/edit_email1"
+        />
+    <EditText
+        android:id="@+id/edit_name"
+        style="@style/Edit_Text"
+        android:layout_marginTop="10dp"
+        android:drawableRight="@drawable/ic_account"
+        android:hint="Nome completo"
+        android:textColorHint="#808080"
+        android:textColor="#000000"
+        android:imeOptions="actionNext"
+        android:inputType="textCapWords"
+        app:layout_constraintEnd_toEndOf="@id/ContainerComponents"
+        app:layout_constraintStart_toStartOf="@id/ContainerComponents"
+        app:layout_constraintTop_toBottomOf="@id/edit_confEmail1"
+        />
+
+    <EditText
+        android:id="@+id/edit_dataNascimento"
+        style="@style/Edit_Text2"
+        android:layout_marginTop="10dp"
+        android:drawableRight="@drawable/ic_calendar"
+        android:hint="dd/mm/aaaa"
+        android:textColorHint="#808080"
+        android:textColor="#000000"
+        android:imeOptions="actionNext"
+        android:inputType="date"
+        app:layout_constraintEnd_toEndOf="@id/ContainerComponents"
+        app:layout_constraintStart_toStartOf="@id/ContainerComponents"
+        app:layout_constraintTop_toBottomOf="@id/edit_name"
+        />
+
+    <EditText
+        android:id="@+id/edit_cpf1"
+        style="@style/Edit_Text"
+        android:layout_marginTop="10dp"
+        android:drawableRight="@drawable/ic_contact"
+        android:hint="Digite seu CPF"
+        android:textColorHint="#808080"
+        android:textColor="#000000"
+        android:imeOptions="actionNext"
+        android:inputType="number|numberDecimal"
+        app:layout_constraintEnd_toEndOf="@id/ContainerComponents"
+        app:layout_constraintStart_toStartOf="@id/ContainerComponents"
+        app:layout_constraintTop_toBottomOf="@id/edit_dataNascimento" />
+
+    <LinearLayout
+        android:id="@+id/sexo_section"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp"
+        app:layout_constraintStart_toStartOf="@id/ContainerComponents"
+        app:layout_constraintEnd_toEndOf="@id/ContainerComponents"
+        app:layout_constraintTop_toTopOf="@id/edit_cpf1"
+        >
+
+        <TextView
+            android:id="@+id/tv_sexo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Sexo"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="28dp"
+            android:layout_marginRight="290dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintStart_toStartOf="@id/ContainerComponents"
+            app:layout_constraintEnd_toEndOf="@id/ContainerComponents"
+            app:layout_constraintTop_toBottomOf="@id/ContainerComponents"
+            />
+
+        <RadioGroup
+            android:id="@+id/rg_sexo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:textColor="#000000">
+
+            <RadioButton
+                android:id="@+id/rb_masculino"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="29dp"
+                android:textSize="20dp"
+                android:text="Masculino"
+                android:textColor="#000000"/>
+
+            <RadioButton
+                android:id="@+id/rb_feminino"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:textSize="20dp"
+                android:text="Feminino"
+                android:textColor="#000000"/>
+
+        </RadioGroup>
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_Continuar"
+        style="@style/Button"
+        android:text="@string/continuar"
+        android:layout_width="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sexo_section"
+    />
+</androidx.constraintlayout.widget.ConstraintLayout>

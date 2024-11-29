@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">FITFRIENDS</string>
+    <string name="proximo">Proximo</string>
+    <string name="continuar">Continuar</string>
+    <string name="digite_seu_email">Digite seu Email</string>
+    <string name="cadastrar">Cadastrar</string>
+    <string name="entrar">Entrar</string>
+    <string name="text_esqueceu">Esqueceu a senha?</string>
+    <string name="text_cadastro">Clique aqui para criar uma conta</string>
+    <string name="text_face">Entrar com o Facebook</string>
+    <string name="text_google">Entrar com o Google</string>
+
+</resources>

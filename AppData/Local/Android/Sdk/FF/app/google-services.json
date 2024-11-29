@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1007422858851",
+    "project_id": "fitfriends-8417f",
+    "storage_bucket": "fitfriends-8417f.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1007422858851:android:17d3e7fdadfd559cb63a56",
+        "android_client_info": {
+          "package_name": "com.example.ff"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAkzPnDifXQU7rNQ5UgHnAmIP2L1a5rgNo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
